@@ -1,17 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class PanelOpen : MonoBehaviour
 {
-    public CanvasPower canvasPower;
+    public Canvas canvasPower;
 
     private void Update()
     {
-        if(Input.GetkeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-        PanelOpen.gameObject.SetActive(!canvasPower.gameObject.activeSelf);
+            canvasPower.gameObject.SetActive(!canvasPower.gameObject.activeSelf);
         }
-
     }
 }
