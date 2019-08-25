@@ -24,18 +24,6 @@ public class itemRay : MonoBehaviour
     // Start is called before the first frame update
    
     // Update is called once per frame
-    
-
-    public void OnMouseEnter()
-    {
-        Debug.Log("Enter");
-    }
-
-    public void OnMouseExit()
-    {
-        Debug.Log("Exit");
-    }
-   
     void Update ()
     {
         //huge problem, I got it to turn read when looking at it but now if player gets close to any object it turns red and the green function still works
@@ -47,15 +35,16 @@ public class itemRay : MonoBehaviour
         if (Physics.Raycast(ray, out hit))
         {
             var selection = hit.transform;
-
+            if (selection.CompareTag(selectableTag))
             if (Physics.Raycast(ray, out hit, 2))
             {
                 Red();
 
                 if (Input.GetButton("Fire1"))
                 {
-                    Green();
-                        //make Green function
+                        
+                        Green();
+                        //make Green function 
                 }
             }
             else
