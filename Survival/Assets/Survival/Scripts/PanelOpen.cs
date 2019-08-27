@@ -7,9 +7,11 @@ public class PanelOpen : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.P))
+            //erased escape to test the cursor visible
         {
             canvasPower.gameObject.SetActive(!canvasPower.gameObject.activeSelf);
         }
     }
+
 }
