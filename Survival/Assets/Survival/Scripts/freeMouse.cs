@@ -8,7 +8,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class freeMouse : MonoBehaviour
 {
 
-    private bool isCursorLocked;
+    public bool isCursorLocked;
 
 
     private void Start()
@@ -22,7 +22,7 @@ public class freeMouse : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void ToggleCursorState()
+    public void ToggleCursorState()
     {
         isCursorLocked = !isCursorLocked;
     }
@@ -35,7 +35,7 @@ public class freeMouse : MonoBehaviour
         }
     }
     
-    void CheckifCursorShouldBeLocked()
+    public void CheckifCursorShouldBeLocked()
     {
         if(isCursorLocked)
         {
